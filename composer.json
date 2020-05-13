@@ -1,0 +1,29 @@
+{
+    "name": "quansitech/qscmf-antd-tag",
+    "description": "antd tag",
+    "type": "library",
+    "keywords": ["qscmf", "component"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "tiderjian",
+            "email": "tider_yatsen@hotmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.2",
+        "tiderjian/think-core": ">=10.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "AntdTag\\": "src/"
+        }
+    },
+    "extra": {
+        "qscmf": {
+            "providers": [
+                "AntdTag\\AntdTagProvider"
+            ]
+        }
+    }
+}

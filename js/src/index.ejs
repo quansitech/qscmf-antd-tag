@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>React & Webpack</title>
+    </head>
+    <body>
+    </div>
+        <div id="root">
+        </div>
+
+        <script>
+                var opt = {
+                    name: 'test',
+                    tags: [
+                        {
+                            id: 1,
+                            text: '测试1',
+                            editable: true,
+                            deletable: true
+                        },
+                        {
+                            id: 2,
+                            text: '测试2',
+                            editable: false,
+                            deletable: false
+                        }
+                    ],
+                    createTag: true
+                };
+                antdTag('root', opt); //第一个参数是需要渲染的dom id， 第二个参数为上面的配置对象
+        </script>
+    </body>
+</html>

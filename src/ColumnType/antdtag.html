@@ -1,0 +1,10 @@
+<notdefined name="antd-tag">
+    <script src="__PUBLIC__/antd-tag-bundle.js"></script>
+    <define name="antd-tag" value="1" />
+</notdefined>
+<div id="{$gid}">
+</div>
+<script>
+    var opt = {:json_encode($opt)};
+    antdTag('{$gid}', opt); //第一个参数是需要渲染的dom id， 第二个参数为上面的配置对象
+</script>
