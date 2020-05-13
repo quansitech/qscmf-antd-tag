@@ -16,6 +16,7 @@ composer require quansitech/qscmf-antd-tag
 
 #### 用法
 + 组件基础
+
 组件默认带hidden的input元素，input元素存着tag id序列，用逗号分隔。当使用列表保存或者表单提交，都会将这个隐藏input的数据提交到后端处理。
 
 如果新增tag，tag id默认格式为 @ + tag名称， 如新增 test1，那么tag.id=@test1。 因此做业务处理时可判断有无@前缀来辨别是否新增的数据
