@@ -71,7 +71,7 @@ function AntdTag(props){
     }
 
     return (
-        <div>
+        <div class="ant-tag-container">
             <input class="save" name={props.name + '[]' } type="hidden" ref={inputHidden} />
             {tags.map((tag, index) => {
                 if (editInputIndex === index && tag.editable) {
@@ -134,7 +134,7 @@ function AntdTag(props){
             )}
             {!inputVisible && props.createTag && (
                 <Tag color="#f50"  className="site-tag-plus" onClick={showInput}>
-                    <PlusOutlined /> New Tag
+                    <PlusOutlined /> { props.createTagBtnText }
                 </Tag>
             )}
         </div>
@@ -142,9 +142,9 @@ function AntdTag(props){
 }
 
 function antdTag(id, opt){
-    const defaultOpt = { name: '', tags: [], createTag: false};
+    const defaultOpt = { name: '', tags: [], createTag: false, createTagBtnText: 'New Tag'};
     Object.assign(defaultOpt, opt);
-    ReactDOM.render(<AntdTag name={ defaultOpt.name } tags={ defaultOpt.tags } createTag={ defaultOpt.createTag } />, document.getElementById(id));
+    ReactDOM.render(<AntdTag name={ defaultOpt.name } tags={ defaultOpt.tags } createTag={ defaultOpt.createTag } createTagBtnText={ defaultOpt.createTagBtnText } />, document.getElementById(id));
 }
 
 window.antdTag = antdTag;

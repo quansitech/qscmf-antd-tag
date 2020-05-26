@@ -3,3 +3,10 @@
     margin-right: 8px;
     vertical-align: top;
 }
+.ant-tag{
+    margin-bottom: 8px;
+}
+.ant-tag-container{
+    margin-bottom: -8px;
+}
+
