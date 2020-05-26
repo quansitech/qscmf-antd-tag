@@ -48,7 +48,9 @@ $builder = new ListBuilder();
 .
 .
 .
-$builder->addTableColumn('person', '已绑定', 'antd_tags', ['createTag' => false])   //createTag 是否可新增tag 默认为false 可省略
+$builder->addTableColumn('person', '已绑定', 'antd_tags', ['createTag' => false, 'createTagBtnText' => '添加'])   
+//createTag 是否可新增tag 默认为false 可省略 
+//createTagBtnText 新增按钮的文字提示 默认为 New Tag， 只有当createTag为true时才有效
 ->setTableDataList($data_list)
 ```
 
@@ -72,7 +74,9 @@ $info['person'] = [
 ];
 
 $builder = new FormBuilder();
-$builder->addFormItem('person', 'antd_tags', '绑定用户', '', ['createTag' => true]) //createTag 是否可新增tag 默认为false 可省略
+$builder->addFormItem('person', 'antd_tags', '绑定用户', '', ['createTag' => true]) 
+//createTag 是否可新增tag 默认为false 可省略
+//createTagBtnText 新增按钮的文字提示 默认为 New Tag， 只有当createTag为true时才有效
 ->setFormData($info);
 ```
 
