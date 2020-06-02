@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import {Input, Tag, Tooltip} from "antd";
+import 'antd/lib/tooltip/style/index.css';
+import 'antd/lib/tag/style/index.css';
 import ReactDOM from "react-dom";
 import { PlusOutlined } from '@ant-design/icons';
 import "./index.css"
@@ -71,8 +73,8 @@ function AntdTag(props){
     }
 
     return (
-        <div class="ant-tag-container">
-            <input class="save" name={props.name + '[]' } type="hidden" ref={inputHidden} />
+        <div className="ant-tag-container">
+            <input className="save" name={props.name + '[]' } type="hidden" ref={inputHidden} />
             {tags.map((tag, index) => {
                 if (editInputIndex === index && tag.editable) {
                     return (
